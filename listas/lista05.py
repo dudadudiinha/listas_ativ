@@ -13,7 +13,7 @@ y=int(input('Digite um número: '))
 z=int(input('Digite um número: '))
 print(maior(x,y,z))
 
-#3 REVER!
+#3
 def iniciais(nome):
     partes = nome.split()
     letras = ""

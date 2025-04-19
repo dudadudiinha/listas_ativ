@@ -1,4 +1,4 @@
-'''#1036
+#1036
 digitos = input('Digite três números: ').split()
 a = float(digitos[0])
 b = float(digitos[1])
@@ -95,15 +95,63 @@ for i in range(1, 100+1):
     if num > maior:
         maior = num
         posicao = i
-print(f'O maior número é {maior}, que se encontra na posição {posicao}')'''
+print(f'O maior número é {maior}, que se encontra na posição {posicao}')
 
 #1094
-
+n = int(input('Digite a quantidade de casos: '))
+todos = 0
+coelhinhos = 0
+sapinhos = 0
+ratinhos = 0
+for _ in range(n):
+    digitacao = input('Digite, respectivamente, a quantidade de cobaias e a qual espécie pertencem: ').split()
+    quant = int(digitacao[0])
+    especie = digitacao[1].upper()
+    todos+=quant
+    if especie == 'C':
+        coelhinhos+=quant
+    elif especie == 'S':
+        sapinhos+=quant
+    elif especie == 'R':
+        ratinhos+=quant
+pcoelinhos = (coelhinhos/todos)*100
+psapinhos = (sapinhos/todos)*100
+pratinhos = (ratinhos/todos)*100
+print(f'Total: {todos} cobaias\nTotal de coelhos: {coelhinhos}\nTotal de ratos: {ratinhos}\nTotal de sapos: {sapinhos}')
+print(f'Percentual de coelhos: {pcoelinhos:.2f}%\nPercentual de ratos: {pratinhos:.2f}%\nPercentual de sapos: {psapinhos:.2f}%')
 
 #1114
-
+entrada = int(input('Digite a senha: '))
+while entrada != 2002:
+    entrada = int(input('Senha inválida! Digite novamente: '))
+    if entrada == 2002:
+        print('Acesso permitido')
+        break
 
 #1116
-
+ent1 = int(input('Quantos pares você deseja dividir? ')) 
+for _ in range(ent1):
+    entrada = input('Digite dois números: ').split()
+    x = int(entrada[0])
+    y = int(entrada[1])
+    if y == 0:
+        print('Divisão impossível')
+    else:
+        divisao = x/y
+        print(f'{divisao:.1f}')
 
 #1151
+num = int(input('Digite um número: '))
+fibonacci = []
+for i in range(num):
+    if i == 0:
+        fibonacci.append(0)
+    elif i == 1:
+        fibonacci.append(1)
+    else:
+        proximon = fibonacci[i-1] + fibonacci[i-2]
+        fibonacci.append(proximon)
+for cadan in fibonacci:
+    print(cadan, end=' ') 
+print()
+
